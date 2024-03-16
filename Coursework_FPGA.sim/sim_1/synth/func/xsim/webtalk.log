@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sat Mar 16 19:35:53 2024
+# Process ID: 14300
+# Current directory: C:/Users/karim/Coursework_FPGA/Coursework_FPGA.sim/sim_1/synth/func/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/karim/Coursework_FPGA/Coursework_FPGA.sim/sim_1/synth/func/xsim/xsim.dir/top_tb_func_synth/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/karim/Coursework_FPGA/Coursework_FPGA.sim/sim_1/synth/func/xsim/webtalk.log
+# Journal file: C:/Users/karim/Coursework_FPGA/Coursework_FPGA.sim/sim_1/synth/func/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/karim/Coursework_FPGA/Coursework_FPGA.sim/sim_1/synth/func/xsim/xsim.dir/top_tb_func_synth/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Mar 16 19:35:54 2024...
