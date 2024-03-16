@@ -1,25 +1,5 @@
 `timescale 1ns / 1ps
 
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 16.03.2024 13:45:43
-// Design Name: 
-// Module Name: uart_tx
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 module uart_tx(
     input           clock,
     input           start,
@@ -54,13 +34,13 @@ module uart_tx(
 
   always @(posedge clock) begin
     if (reset) begin
-      bit_num    <= 4'hf; 
-      byte_state <= 1'b0; 
-      q <= 1'b1;
+      bit_num       <= 4'hf; 
+      byte_state    <= 1'b0; 
+      q             <= 1'b1;
     end else if (start && idle) begin
-      bit_num    <= 4'h0; 
-      byte_state <= 1'b0;
-      q <= 1'b1;
+      bit_num       <= 4'h0; 
+      byte_state    <= 1'b0;
+      q             <= 1'b1;
     end else if (bit_start) begin
     
       case (bit_num)
@@ -75,8 +55,8 @@ module uart_tx(
         4'h8: begin bit_num <= 4'h9; q <= word[7]; end
         4'h9: begin bit_num <= 4'ha; q <= 1'b1;        
             if (!byte_state) begin
-                byte_state <= 1'b1;
-                bit_num <= 4'h0; 
+                byte_state  <= 1'b1;
+                bit_num     <= 4'h0; 
             end
         end
         default: begin bit_num <= 4'hF; end
