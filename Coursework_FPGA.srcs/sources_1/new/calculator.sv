@@ -2,7 +2,7 @@
 
 module calculator(
 input         clock,
-    input         reset_n,
+    input         reset,
     input         enter,
     input         add,
     input         multiply,
@@ -34,7 +34,7 @@ input         clock,
   assign overflow = r_overflow;
 
   always @(posedge clock) begin
-    if (reset_n) r_overflow <= 0;
+    if (reset) r_overflow <= 0;
     else       r_overflow <= alu_overflow;
   end
 
@@ -45,7 +45,7 @@ input         clock,
 
   stack stack (
       .clock     (clock),
-      .reset_n   (reset_n),
+      .reset   (reset),
       .push      (stack_push),
       .pop       (stack_pop),
       .write_data(stack_write_data),
@@ -105,7 +105,7 @@ input         clock,
   end
 
   always @(posedge clock) begin 
-    if (reset_n) begin
+    if (reset) begin
       r_alu_a           <= 0;
       r_alu_b           <= 0;
       r_alu_multiply    <= 0;

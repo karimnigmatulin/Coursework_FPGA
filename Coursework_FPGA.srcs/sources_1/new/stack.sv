@@ -4,7 +4,7 @@
 
 module stack (
     input clock,
-    input reset_n,
+    input reset,
     input push, // добавление элемента в стек
     input pop,  // удаление элемента из стека
                 
@@ -12,15 +12,14 @@ module stack (
     output [`word_width - 1:0] read_data 
 );
 
-  reg [`word_width - 1:0] stack[0:`stack_size - 1]; 
-
+  reg [`word_width - 1:0] stack[0:`stack_size - 1];
   reg [`stack_pointer_size - 1:0] stack_pointer;
 
   assign read_data = stack[stack_pointer];
 
   integer i;
   always @(posedge clock) begin
-    if (reset_n) begin 
+    if (reset) begin 
       stack_pointer <= 0;
       for (i = 0; i < `stack_size; i = i + 1) stack[i] <= 0;
     end else if (push) begin 

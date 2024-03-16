@@ -3,69 +3,37 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="uart_rx_tb_behav.wdb" id="1">
+      <db_ref path="top_tb_func_impl.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
-            <top_module name="uart_rx_tb" />
+            <top_module name="top_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="3000000000001fs"></ZoomEndTime>
-      <Cursor1Time time="3000000000000fs"></Cursor1Time>
+      <ZoomEndTime time="3001000000001fs"></ZoomEndTime>
+      <Cursor1Time time="3001000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="183"></NameColumnWidth>
-      <ValueColumnWidth column_width="74"></ValueColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="12" />
-   <wvobject fp_name="/uart_rx_tb/uut/clock" type="logic">
+   <WVObjectSize size="4" />
+   <wvobject fp_name="/top_tb/uut/clock" type="logic">
       <obj_property name="ElementShortName">clock</obj_property>
       <obj_property name="ObjectShortName">clock</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_rx_tb/uut/reset" type="logic">
+   <wvobject fp_name="/top_tb/uut/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_rx_tb/uut/rx" type="logic">
+   <wvobject fp_name="/top_tb/uut/rx" type="logic">
       <obj_property name="ElementShortName">rx</obj_property>
       <obj_property name="ObjectShortName">rx</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_rx_tb/uut/byte_data" type="array">
-      <obj_property name="ElementShortName">byte_data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">byte_data[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_rx_tb/uut/byte_ready" type="logic">
-      <obj_property name="ElementShortName">byte_ready</obj_property>
-      <obj_property name="ObjectShortName">byte_ready</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_rx_tb/uut/state" type="array">
-      <obj_property name="ElementShortName">state[31:0]</obj_property>
-      <obj_property name="ObjectShortName">state[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_rx_tb/uut/counter" type="array">
-      <obj_property name="ElementShortName">counter[31:0]</obj_property>
-      <obj_property name="ObjectShortName">counter[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_rx_tb/uut/bit_count" type="array">
-      <obj_property name="ElementShortName">bit_count[3:0]</obj_property>
-      <obj_property name="ObjectShortName">bit_count[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_rx_tb/uut/rx_filter" type="array">
-      <obj_property name="ElementShortName">rx_filter[1:0]</obj_property>
-      <obj_property name="ObjectShortName">rx_filter[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_rx_tb/uut/clock_frequency" type="array">
-      <obj_property name="ElementShortName">clock_frequency[31:0]</obj_property>
-      <obj_property name="ObjectShortName">clock_frequency[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_rx_tb/uut/baud_rate" type="array">
-      <obj_property name="ElementShortName">baud_rate[31:0]</obj_property>
-      <obj_property name="ObjectShortName">baud_rate[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_rx_tb/uut/clock_cycles_in_bit" type="array">
-      <obj_property name="ElementShortName">clock_cycles_in_bit[31:0]</obj_property>
-      <obj_property name="ObjectShortName">clock_cycles_in_bit[31:0]</obj_property>
+   <wvobject fp_name="/top_tb/uut/tx" type="logic">
+      <obj_property name="ElementShortName">tx</obj_property>
+      <obj_property name="ObjectShortName">tx</obj_property>
    </wvobject>
 </wave_config>
