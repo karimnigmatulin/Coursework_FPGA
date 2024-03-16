@@ -1,14 +1,19 @@
 Vivado Simulator 2018.1
 Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto d8431ed01a9f4952be9bdd14dd583509 --incr --debug typical --relax --mt 2 -L xilinx_vip -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot uart_rx_tb_behav xil_defaultlib.uart_rx_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto d8431ed01a9f4952be9bdd14dd583509 --incr --debug typical --relax --mt 2 -L xilinx_vip -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 8 for port byte_data [C:/Users/karim/Coursework_FPGA/Coursework_FPGA.srcs/sim_1/new/uart_rx_tb.v:35]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.uart_rx_default
-Compiling module xil_defaultlib.uart_rx_tb
+Compiling module xil_defaultlib.ascii_to_action
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.stack
+Compiling module xil_defaultlib.calculator
+Compiling module xil_defaultlib.uart_tx_default
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.top_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot uart_rx_tb_behav
+Built simulation snapshot top_tb_behav
