@@ -136,14 +136,14 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 set obj [get_filesets sources_1]
 # Import local files from the original project
 set files [list \
- [file normalize "${origin_dir}/Coursework_FPGA.srcs/sources_1/new/alu.sv" ]\
- [file normalize "${origin_dir}/Coursework_FPGA.srcs/sources_1/new/ascii_to_action.sv" ]\
- [file normalize "${origin_dir}/Coursework_FPGA.srcs/sources_1/new/calculator.sv" ]\
- [file normalize "${origin_dir}/Coursework_FPGA.srcs/sources_1/new/defines.vh" ]\
- [file normalize "${origin_dir}/Coursework_FPGA.srcs/sources_1/new/stack.sv" ]\
- [file normalize "${origin_dir}/Coursework_FPGA.srcs/sources_1/new/uart_rx.sv" ]\
- [file normalize "${origin_dir}/Coursework_FPGA.srcs/sources_1/new/uart_tx.sv" ]\
- [file normalize "${origin_dir}/Coursework_FPGA.srcs/sources_1/new/top.sv" ]\
+ [file normalize "./Coursework_FPGA.srcs/sources_1/new/alu.sv" ]\
+ [file normalize "./Coursework_FPGA.srcs/sources_1/new/ascii_to_action.sv" ]\
+ [file normalize "./Coursework_FPGA.srcs/sources_1/new/calculator.sv" ]\
+ [file normalize "./Coursework_FPGA.srcs/sources_1/new/defines.vh" ]\
+ [file normalize "./Coursework_FPGA.srcs/sources_1/new/stack.sv" ]\
+ [file normalize "./Coursework_FPGA.srcs/sources_1/new/uart_rx.sv" ]\
+ [file normalize "./Coursework_FPGA.srcs/sources_1/new/uart_tx.sv" ]\
+ [file normalize "./Coursework_FPGA.srcs/sources_1/new/top.sv" ]\
 ]
 set imported_files [import_files -fileset sources_1 $files]
 
