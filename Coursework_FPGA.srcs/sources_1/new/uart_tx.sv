@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 
 module uart_tx(
-    input           clock,
-    input           start,
-    input           reset,
-    input  [15:0]   data,
+    input                                   clock,
+    (*mark_debug = "true"*) input           start,
+    input                                   reset,
+    input  [15:0]                           data,
 
     output reg      q, 
     output          busy
@@ -20,16 +20,16 @@ module uart_tx(
   wire bit_start = (cnt == clock_cycles_in_bit);
   wire idle = (bit_num == 4'hF);
   
-  assign busy = ~idle;
+  assign busy = ~idle; 
 
   reg byte_state;
   wire [7:0] word = byte_state ? data[7:0] : data[15:8];
 
   always @(posedge clock) begin
-    if (reset) cnt <= 13'b0;
+    if (reset)              cnt <= 13'b0;
     else if (start && idle) cnt <= 13'b0;
-    else if (bit_start) cnt <= 13'b0; 
-    else cnt <= cnt + 13'b1;
+    else if (bit_start)     cnt <= 13'b0; 
+    else                    cnt <= cnt + 13'b1;
   end
 
   always @(posedge clock) begin
@@ -42,7 +42,6 @@ module uart_tx(
       byte_state    <= 1'b0;
       q             <= 1'b1;
     end else if (bit_start) begin
-    
       case (bit_num)
         4'h0: begin bit_num <= 4'h1; q <= 1'b0;    end 
         4'h1: begin bit_num <= 4'h2; q <= word[0]; end 
@@ -61,7 +60,6 @@ module uart_tx(
         end
         default: begin bit_num <= 4'hF; end
       endcase
-      
     end
   end
   

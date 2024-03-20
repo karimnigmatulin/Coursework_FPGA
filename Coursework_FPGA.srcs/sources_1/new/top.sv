@@ -3,12 +3,12 @@
 module top(
 
     // Inputs
-   input            clock,
-   input            reset,
-   input            rx,
+   input                                    clock,
+   (*mark_debug = "true"*) input            reset,
+   (*mark_debug = "true"*) input            rx,
    
    // Outputs
-   output reg       tx
+   (*mark_debug = "true"*) output reg       tx
 // (*mark_debug = "true"*) 
 );
 

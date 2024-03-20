@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module calculator(
-input         clock,
+    input         clock,
     input         reset,
     input         enter,
     input         add,
@@ -45,7 +45,7 @@ input         clock,
 
   stack stack (
       .clock     (clock),
-      .reset   (reset),
+      .reset     (reset),
       .push      (stack_push),
       .pop       (stack_pop),
       .write_data(stack_write_data),
@@ -62,8 +62,8 @@ input         clock,
   reg temp_newresult;
 
   assign result    = stack_read_data;
-//  assign newresult = (result != oldresult) && state == 0 && alu_a != 16'b0 && alu_b != 16'b0; // когда старый результат не равняется новому, мы находимся в нулевом состоянии - готовы принимать числа
-   assign newresult = (result != oldresult) && next_state == 0 && state == 2 && alu_a != 16'b0 && alu_b != 16'b0;
+//assign newresult = (result != oldresult) && state == 0; // когда старый результат не равняется новому, мы находимся в нулевом состоянии - готовы принимать числа
+  assign newresult = (result != oldresult) && next_state == 0 && state == 2 && alu_a != 16'b0 && alu_b != 16'b0;
    
   always @(*) 
   begin
@@ -86,7 +86,6 @@ input         clock,
             alu_multiply        = multiply;
             stack_pop           = 1; 
             next_state          = 1; 
-           
           end
     
           1: begin 
